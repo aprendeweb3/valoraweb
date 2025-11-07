@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Soledad</title>
+  <style>
+    /* --- Fondo y estilo base --- */
+    body {
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background: linear-gradient(120deg, #e0f7fa, #f1f8e9, #fce4ec);
+      background-size: 400% 400%;
+      animation: fondoMovimiento 25s ease infinite;
+      font-family: "Merriweather", serif;
+          border-radius: 10px;
+  max-width: 900px;
+  margin: 90px auto;
+    }
+
+    @keyframes fondoMovimiento {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* --- Contenedor principal --- */
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto 100px auto;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    table:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    caption {
+      caption-side: top;
+      font-size: 2em;
+      font-weight: 900;
+      color: #111;
+      background: linear-gradient(135deg, #81c784, #4db6ac);
+      padding: 20px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    td {
+      padding: 35px 40px;
+      text-align: justify;
+      line-height: 1.8;
+      font-size: 18px;
+      font-weight: 500;
+      color: #111;
+      text-shadow:
+        0.5px 0.5px 1px rgba(0, 0, 0, 0.2),
+        1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --- Botones de control --- */
+    .botones {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 12px 26px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .escuchar { background: linear-gradient(135deg, #4db6ac, #81c784); }
+    .escuchar:hover { background: linear-gradient(135deg, #009688, #388e3c); transform: scale(1.05); }
+
+    .detener { background: linear-gradient(135deg, #ef5350, #e53935); }
+    .detener:hover { background: linear-gradient(135deg, #c62828, #b71c1c); transform: scale(1.05); }
+
+    .volver { background: linear-gradient(135deg, #5c6bc0, #3949ab); }
+    .volver:hover { background: linear-gradient(135deg, #303f9f, #1a237e); transform: scale(1.05); }
+
+    /* --- Botones de desplazamiento internos --- */
+    .scroll-interno {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 15px 0 25px 0;
+    }
+
+    .scroll-interno button {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      font-size: 22px;
+      background: linear-gradient(135deg, #4db6ac, #00796b);
+    }
+
+    .scroll-interno button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #009688, #004d40);
+    }
+
+    /* --- Footer --- */
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      font-size: 0.9em;
+      color: #333;
+      opacity: 0.8;
+      font-family: "Poppins", sans-serif;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    /* --- RESPONSIVE DESIGN --- */
+    @media (max-width: 768px) {
+      caption { font-size: 1.8em; padding: 15px; }
+      td { padding: 25px; font-size: 17px; }
+      .botones { flex-direction: column; align-items: center; }
+      button { width: 80%; }
+      .scroll-interno button { width: 50px; height: 50px; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 10px; }
+      table { width: 100%; border-radius: 15px; }
+      caption { font-size: 1.6em; }
+      td { padding: 20px; font-size: 16px; }
+      button { font-size: 0.95em; padding: 10px 20px; }
+      .scroll-interno button { width: 45px; height: 45px; font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <table id="tabla">
+    <caption>La Soledad</caption>
+    <tr>
+      <td id="texto">
+
+       
+
+        <!-- Contenido -->
+La soledad puede ser un refugio sereno, un espacio donde el alma se encuentra a sí misma y cada actitud tiene su lugar, como hojas que flotan suavemente en un río tranquilo, permitiendo que cada emoción se despliegue sin prisas y cada suspiro se sienta pleno y consciente. En esa quietud, la paz se desliza lentamente por los rincones más íntimos del corazón, acariciando el espíritu y llenando el aire de una calma profunda que parece abrazar todo a su alrededor. Cada instante se convierte en un pequeño universo propio, donde la luz que entra por la ventana pinta sombras suaves sobre las paredes y cada sonido, por mínimo que sea, adquiere un ritmo delicado que acompaña la respiración y el latido de la vida interior. Todo es armonía y equilibrio: la libertad de sentir sin miedo, de reflexionar sin prisa, de dejar que los recuerdos y los sueños floten sin peso, mientras el tiempo parece detenerse y la percepción se vuelve más clara, más consciente, más plena. Aquí, cada sensación es más intensa, cada emoción más profunda, y la conexión con uno mismo y con todo lo que nos rodea se vuelve clara, cálida y reconfortante, recordándonos que la soledad no es un vacío, sino un espacio fértil donde crecen la calma, la introspección y la plenitud del ser.
+En ese espacio, cada sonido que llega del exterior se transforma en música suave, cada brisa acaricia la piel como un recordatorio de que la vida sigue fluyendo, y cada color que observa la mirada se vuelve más brillante y significativo. La mente se expande, como si tuviera todo el tiempo del mundo para recorrer pensamientos, recuerdos, sueños y deseos, para contemplarlos sin apuro, sin juzgar, solo observando y dejando que todo exista con naturalidad. Las emociones se sienten con claridad: la alegría de un recuerdo querido, la satisfacción de un pensamiento tranquilo, la curiosidad que despierta la imaginación, todo convive en armonía, creando un equilibrio interno que nutre la conciencia y fortalece la sensación de bienestar. La soledad se convierte en un espejo, donde el reflejo que se observa no es vacío ni incompleto, sino lleno de potencial, de serenidad y de una autenticidad que pocas veces se alcanza en la prisa del mundo exterior.
+Cada detalle del entorno parece más vivo: el roce del viento contra la piel, el murmullo de las hojas, el aroma de la tierra o del agua cercana, el cambio sutil de la luz durante el día, todo contribuye a una sensación de presencia plena, donde cada acción se realiza con atención y cuidado. Las ideas surgen como corrientes de luz, algunas rápidas, otras lentas, todas igualmente valiosas y reflejo de la riqueza interior y la profundidad de la experiencia. Incluso los silencios se sienten llenos de significado, cada pausa entre los sonidos es un espacio donde se respira la existencia, donde se puede escuchar la voz interna, donde se percibe la interconexión entre el propio ser y todo lo que lo rodea. En la soledad, la percepción del tiempo cambia: los segundos parecen alargarse, las horas se sienten densas de vida, y cada instante se vuelve eterno en su intensidad y claridad, revelando la belleza de lo simple, de lo cotidiano, de lo que muchas veces pasa desapercibido en la prisa del mundo.
+Aquí, todo se convierte en un acto de contemplación: el aire, la luz, los sonidos, , los recuerdos, los sueños; cada elemento se integra en un flujo continuo que nutre la mente y el corazón, donde la paz no es un estado momentáneo, sino un hilo constante que atraviesa cada sensación y cada emoción. La soledad se transforma en compañía plena de uno mismo, un lugar donde se escucha la propia voz interior, donde se descubre la fuerza y la suavidad del propio ser, y donde cada respiración es un recordatorio de que la vida está viva, rica y disponible para ser sentida, apreciada y celebrada. Es un refugio donde cada pensamiento florece, cada emoción se comprende, y cada instante se vive con profundidad, un espacio donde la plenitud no depende de nada externo, sino de la disposición a habitar la propia existencia con atención, cariño y gratitud, reconociendo la riqueza infinita que se encuentra en la quietud y la serenidad de la soledad consciente.
+Me llamo Federico y fui víctima de violencia digital. Esto significa que no me dejaban expresarme ni hablar, y cada acción que hacía en redes sociales como Facebook, Instagram, Twitter o TikTok se convertía en una amenaza. Mis compañeros no lo hacían como una broma, sino que siempre querían controlar a los demás, como si fueran los jefes de la escuela secundaria. Muchas veces obedecía o permitía que me manipularan. Detectaba manipulación tanto entre esos compañeros como entre las chicas.Quise cambiar de escuela secundaria, pero la situación no mejoró, porque no quería perder el tiempo ni la oportunidad de recibir un título. Pasé cinco años soportando esa situación y, aun así, seguí adelante. Fue difícil, pero entendí que, aunque las personas puedan intentar controlar y manipular, siempre es importante seguir buscando nuestro propio camino y mantenernos firmes en lo que queremos lograr.
+En toda esa situación, quería denunciar lo que estaba pasando, pero decidí no hacerlo, porque ya sabía cómo iban a reaccionar mis compañeros. Uno de ellos podía reaccionar de manera violenta y agresiva. Cuando salí del grupo de WhatsApp, quería hacerlo para alejarme, pero siempre había compañeros que molestaban y escribían en privado, disfrazando sus faltas de respeto como bromas. Querían que volviera al grupo para continuar con los insultos y la violencia digital.Decidí esperar hasta quinto año y, cuando llegó ese momento, pude cambiar mi SIM y enfrentar ese desafío. Ahora estoy mejor, más organizado, construyendo mi vida y dejando atrás el pasado. Nunca regresaré a esa dinámica con personas manipuladoras y enfermas mentalmente, que fueron esos compañeros.
+Muchas personas pueden reírse de lo que digo, pero es la verdad: nadie puede imponerte límites ni controlarte. Nadie es esclavo de nadie. Cada persona merece respeto, apoyo y protección frente a la manipulación. Muchos no ofrecieron esa defensa, e incluso algunas mujeres cercanas terminaron siendo cómplices de los manipuladores, sin reconocer el daño que causaban.
+Cuando apenas era adolescente, esperaba mucho del mundo, pero parecía que todo estaba fuera de mi alcance. Sentía que solo quedaba enfrentar los desafíos de la vida, como si cada objetivo estuviera lejos de mí. A veces soñaba con libertad, con viajar y disfrutar, lejos de la escuela secundaria, pero siempre tenía que asistir, aun bajo la lluvia de amenazas de mis compañeros. Ellos decían que no debía ir a la escuela y me amenazaban con golpearme si lo hacía. En ocasiones, cuando no asistía, la profesora preguntaba por qué no había ido, pero yo siempre ocultaba las amenazas de mis compañeros.
+Todos queremos alcanzar la cima, lograr algo en la vida y graduarnos de la escuela secundaria, pero no es fácil cuando tienes que convivir con personas con problemas de salud mental que afectan a los demás. Avanzar se vuelve difícil, lleno de obstáculos. Muchos buscan sacar un 8 o un 10 en los trabajos prácticos o exámenes, pero al mismo tiempo no se esfuerzan, dedicando gran parte de su tiempo a ir a boliches, jugar videojuegos en consolas como PlayStation 3, 4 o 5, o pasar horas en la PC jugando juegos como Counter-Strike, entre otros.
+comprendí que la vida no se trata solo de competir ni de compararse con los demás. Cada persona tiene su propio camino, sus propias batallas y sus propias formas de crecer. La manipulación y la violencia de otros pueden intentar frenarnos, pero también nos enseñan a valorar nuestra libertad, nuestra fortaleza y nuestra capacidad de decisión. Aprendí que el respeto hacia uno mismo es más importante que la aprobación de los demás, y que el coraje de seguir adelante, a pesar de las amenazas y dificultades, es lo que realmente nos permite construir nuestro destino.
+También entendí que perdonar no significa olvidar. No se trata de volver al pasado ni de justificar a quienes nos dañaron, sino de reconocer que nuestra vida merece avanzar, construir sueños y rodearnos de personas que sumen, como padres, tíos, madres, primos y primas que me ayudaron mucho. No debemos permitir que quienes restan, como algunos compañeros manipuladores y enfermos, o sus cómplices como compañeras que ayudaban a esos compañeros manipuladores y amenazadores. Si alguna vez las encuentro en un restaurante o en el centro y me saludan con un “hola, ¿cómo estás?”, simplemente responderé “todo bien”, pero no volveré a relacionarme con esas compañeras o compañeros de la escuela secundaria. Han sido completamente eliminados de mi vida y no ocuparán espacio en mi presente ni en mi futuro.
+El sol, esa estrella brillante que vemos en el cielo cada día, nos acompaña desde el comienzo de nuestras vidas sin pedir nada a cambio. Su luz, aparentemente simple, sostiene toda la vida en la Tierra. A veces nos encontramos en medio de la soledad, momentos en los que el mundo parece silencioso y nuestros pensamientos se vuelven más claros. Aunque la soledad puede ser difícil, bajo la luz del sol descubrimos que no estamos del todo solos: hay una presencia constante, un calor que nos envuelve aunque nadie más esté cerca, recordándonos que la vida sigue adelante y que siempre es posible continuar, iluminando nuestro propio camino.
+Federico y su familia fueron víctimas de múltiples situaciones graves desde 2007 hasta 2025. Entre los hechos se incluyen bullying, violencia digital, amenazas cibernéticas, robo en su hogar (un celular y una llave de auto) y amenazas de arma de fuego dirigidas al padre. Además, fueron atacados por ciberdelincuentes que enviaban virus, spam y espiaban sus dispositivos, incluyendo celulares y notebooks. Estas personas eran programadores y analistas de sistemas con conocimientos avanzados de informática, utilizando incluso sistemas operativos como Kali Linux. La prima de Federico también fue víctima de grooming, y le crearon cuentas falsas para acosarla y suplantar su identidad. Los hackers que eran delincuentes porque tenía el sistema operativo Kali Linux espiaban a toda la familia: tíos, tías, primos, primas y otros contactos, obteniendo información completa de la familiar. Estos delincuentes tenían una empresa eran  comprises de jueces, juezas y de la policía especializada en cibercrimen.
+
+        
+       <!-- Botones de control -->
+<div class="botones">
+  <button class="escuchar" onclick="leerTexto()">🔊 Escuchar</button>
+  <button class="detener" onclick="detenerLectura()">⏹️ Detener</button>
+  <button class="volver" onclick="window.location.href='index.html'">⬅ Volver Atras</button>
+</div>
+
+
+        <!-- Botones de desplazamiento abajo -->
+        <div class="scroll-interno">
+          <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆</button>
+          <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">⬇</button>
+        </div>
+
+      </td>
+    </tr>
+  </table>
+
+
+  <script>
+    // --- API de voz ---
+    let synth = window.speechSynthesis;
+    let utterance;
+
+    function leerTexto() {
+      detenerLectura();
+      const texto = document.getElementById("texto").innerText;
+      utterance = new SpeechSynthesisUtterance(texto);
+      utterance.lang = "es-ES";
+      utterance.rate = 1;
+      utterance.pitch = 1;
+      utterance.volume = 1;
+      synth.speak(utterance);
+    }
+
+    function detenerLectura() {
+      if (synth.speaking) synth.cancel();
+    }
+  </script>
+
+</body>
+</html>

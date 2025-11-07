@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teorías - Realidad de la Verdad Sincera</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ===== VARIABLES Y RESET ===== */
+    :root {
+      --primary: #ff6b35;
+      --secondary: #2d3047;
+      --accent: #ff9e1f;
+      --dark: #1a1a2e;
+      --light: #f8f9fa;
+      --text: #333;
+      --shadow: 0 10px 30px rgba(0,0,0,0.15);
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f1 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+          border-radius: 10px;
+  max-width: 900px;
+  margin: 90px auto;
+    }
+    
+    /* ===== ENCABEZADO ===== */
+    header {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff10"><polygon points="0,0 1000,50 1000,100 0,100"></polygon></svg>') no-repeat bottom;
+      background-size: cover;
+    }
+    
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    header p {
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+    
+    /* ===== CONTENIDO PRINCIPAL ===== */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      width: 100%;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--secondary);
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+    
+    /* ===== BOTONES ===== */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    
+    .card-icon {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      font-size: 2rem;
+    }
+    
+    .card-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--secondary);
+      line-height: 1.4;
+    }
+    
+    .card-btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: var(--transition);
+      margin-top: auto;
+      border: 2px solid var(--secondary);
+    }
+    
+    .card-btn:hover {
+      background: transparent;
+      color: var(--secondary);
+    }
+    
+    .card-btn.external::after {
+      content: ' ↗';
+      font-weight: bold;
+    }
+    
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    
+    .copyright {
+      opacity: 0.7;
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .card {
+        max-width: 100%;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    
+    /* ===== ANIMACIONES ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .card {
+      animation: fadeIn 0.6s ease forwards;
+      opacity: 0;
+    }
+    
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+    .card:nth-child(6) { animation-delay: 0.6s; }
+    .card:nth-child(7) { animation-delay: 0.7s; }
+    .card:nth-child(8) { animation-delay: 0.8s; }
+    .card:nth-child(9) { animation-delay: 0.9s; }
+    .card:nth-child(10) { animation-delay: 1.0s; }
+    .card:nth-child(11) { animation-delay: 1.1s; }
+    .card:nth-child(12) { animation-delay: 1.2s; }
+    .card:nth-child(13) { animation-delay: 1.3s; }
+    
+    /* ===== EFECTO DE PARTICULAS ===== */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+    
+    .particle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: float 15s infinite linear;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-1000%) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="particles" id="particles"></div>
+    <div class="header-content">
+      <h1>En la realidad de la verdad sincera</h1>
+      <p>Aprende nuevas cosas que tienes que saber. Esto nadie te va a decir lo que ocultan</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="section-title">
+        <h2>Explora los temas</h2>
+      </div>
+      
+      <div class="button-grid">
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="card-content">
+            <h3>Bienvenidos al sitio web</h3>
+            <a href="bievenidos.html" class="card-btn">Acceder</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 1 - ¿Qué es la abogacía?</h3>
+            <a href="abogaciacarrera.html" class="card-btn">Explorar</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-hashtag"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 2 - ¿Cómo funcionan Instagram, Twitter, WhatsApp y Telegram?</h3>
+            <a href="empresafacebookinstragamwotro.html" class="card-btn">Descubrir</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-female"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 3 - Las mujeres adultas mienten o inventan cosas</h3>
+            <a href="menoresedad.html" class="card-btn">Leer más</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 4 - Mujeres que cometen delitos</h3>
+            <a href="mujerescomtedelitos.html" class="card-btn">Conocer</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-city"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 5 - La Ciudad en Silencio: Sombras que Observan</h3>
+            <a href="reflexiondigitalpseudocodigos.html" class="card-btn">Reflexionar</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 6 - La vida y la verdad siempre salen a la luz</h3>
+            <a href="reflexionvidaverdad.html" class="card-btn">Ver más</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-user-friends"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 7 - La Soledad</h3>
+            <a href="Soledaddelavida.html" class="card-btn">Explorar</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>Parte 8 - Evidencia parte 1 del delito grooming</h3>
+            <a href="evidenciagroaming.html" class="card-btn">Informarse</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <div class="card-content">
+            <h3>Uso correcto de las redes sociales</h3>
+            <a href="https://www.youtube.com/watch?v=wHkj1qLUtfk" target="_blank" class="card-btn external">Ver video</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>¿Qué es el sexting?</h3>
+            <a href="https://www.youtube.com/watch?v=oQovIqREAZc" target="_blank" class="card-btn external">Ver video</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="card-content">
+            <h3>Sextorsión: cómo defenderse de los extorsionadores</h3>
+            <a href="https://www.youtube.com/watch?v=J7S61gUo3VE" target="_blank" class="card-btn external">Ver video</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-male"></i>
+          </div>
+          <div class="card-content">
+            <h3>Extorsión sexual: Principal víctima, son los hombres</h3>
+            <a href="https://www.youtube.com/watch?v=mnWwhMnxeAc" target="_blank" class="card-btn external">Ver video</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <div class="card-content">
+            <h3>Sextorsión. Miles de españoles han caído en la trampa. Víctimas son los hombres</h3>
+            <a href="https://www.youtube.com/watch?v=DuuZM-joIXY" target="_blank" class="card-btn external">Ver video</a>
+          </div>
+ <div class="card-content">
+            <h3>Los pogramadores que crean sitio web y software muchas persona son buena persona.</h3>
+            <a href="personabuenapogramdores.html" class="card-btn">Informarse</a>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+    // Crear partículas animadas
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 30;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Tamaño y posición aleatorios
+        const size = Math.random() * 10 + 5;
+        const left = Math.random() * 100;
+        const animationDuration = Math.random() * 20 + 10;
+        const animationDelay = Math.random() * 5;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}%`;
+        particle.style.animationDuration = `${animationDuration}s`;
+        particle.style.animationDelay = `${animationDelay}s`;
+        
+        particlesContainer.appendChild(particle);
+      }
+    }
+    
+    // Inicializar cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function() {
+      createParticles();
+      
+      // Agregar efecto de sonido opcional al hacer clic
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+          if (e.target.classList.contains('card-btn')) {
+            // Aquí podrías agregar un efecto de sonido si lo deseas
+            console.log('Navegando a: ' + e.target.getAttribute('href'));
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

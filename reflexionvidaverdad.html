@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Batalla de la Verdad</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        color: #2b0000;
+        background: linear-gradient(135deg, #ffcb7b, #ff8142, #ff4747, #ffd37f);
+        background-size: 400% 400%;
+        animation: fuegoFondo 12s ease infinite;
+            border-radius: 10px;
+  max-width: 900px;
+  margin: 90px auto;
+    }
+
+    @keyframes fuegoFondo {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        max-width: 900px;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 3px solid rgba(255, 85, 0, 0.8);
+        border-radius: 25px;
+        box-shadow: 0 0 40px rgba(255, 80, 0, 0.7);
+        backdrop-filter: blur(8px);
+        overflow-y: auto;
+        max-height: 90vh;
+        scrollbar-width: thin;
+        scrollbar-color: #ff6600 #ffe0b3;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .container::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+        background-color: #ff6600;
+        border-radius: 10px;
+    }
+
+    h3 {
+        color:black;
+        text-transform: uppercase;
+       
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+    }
+
+    p {
+        line-height: 1.8;
+        font-size: 1.2em;
+        text-align: justify;
+        color: #4b0000;
+        margin-bottom: 25px;
+        text-shadow: 0 0 10px rgba(255, 170, 0, 0.3);
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    button {
+        background: linear-gradient(135deg, #ff7a00, #ff3c00);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 12px;
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 15px rgba(255, 70, 0, 0.6);
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px rgba(255, 70, 0, 1);
+    }
+    /* Solo estilos para el botón "Volver atrás" */
+.back-button {
+  display: inline-block;
+  padding: 10px 18px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #333;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  user-select: none;
+}
+
+/* Efecto al pasar el ratón */
+.back-button:hover,
+.back-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  text-decoration: none;
+  outline: none;
+}
+
+/* Efecto al hacer clic */
+.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+  .boton-verdad {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #28a745;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+    .boton-verdad:hover {
+      background-color: #1e7e34;
+      transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+
+    <div class="container"><a href="index.html" class="back-button" aria-label="Volver atrás">Volver Atrás</a>
+        <h3> La vida y la realidad no pueden esconderse; la verdad siempre sale a la luz. Todos los programadores que son buena persona dicen la verdad y actúan con coherencia, dignidad, honestidad, respeto y valores. </h3>
+        <p>
+            En la vida, siempre hay personas adultas, hombres y mujeres, que tienen problemas en su mentalidad. Eso significa que no tienen un buen conocimiento. Hay personas que, al enterarse, se enojan o se enfadan. Esas personas, que son adultas, en toda su vida han preferido ocultar la verdad, como si estuvieran ocultando la policía cibercrimen, al no poner medios en redes sociales o sitios web adecuados para decir la verdad. Quiero aclarar que esto no es un chiste, ni una broma, ni joda. Hablo desde la experiencia y la realidad; no es imaginación ni algo para tomar a la ligera o para decir que es boludez o pelotudez.
+Me gusta porque refleja a las personas que ocultan la verdad, como en sus redes sociales de la policía cibercrimen y otras personas que no ponen en su sitio web la verdad. Además, identifica también a los corruptos, que son los jueces, juesas policiales, el poder judicial, y hasta programadores que hacen cosas ilegales.
+Nadie me limita, no se me elimina. No me gusta el dinero ni me soborno, y a la vez reto a cualquiera; conmigo no se limita porque nadie me vence, ni siquiera el campeón mundial. Los chismes que se lanzan, vida por inventar cosas, vida por inversión, que no tienen ni alma ni corazón. Justo lo dice cuando está afuera: hay que limpiar con la boca con jabón, porque es una aberración de imaginación inventada. No tiene conocimientos adecuados de programación, se junta con la abogacía, y ese chisme está atado con alambre, como si le hubiera picado un alambre en días fríos.
+Hecho como un oro mental, quiero ocultar la verdad para protegerme; no me importa la codicia. Esta es la llegada de mi reino, de la defensa de la verdad sin ocultar nada. No soy esclavo, así que no voy a borrar lo que digo, porque uno dice toda la verdad, pero la gente que habla en contra simplemente demuestra que son muy enfermos o enfermas mentales. Son adultos y adultas, hombres y mujeres, con profesiones en biología, química, educación física, psicología y otras ramas.
+¿Quién sos o quiénes son para cerrar o eliminar todo lo publicado de la verdad? Viste cuando tu ego te devora porque tu mentalidad está muy mal. La situación de la mente de esas personas adultas, hombres y mujeres, sucede mucho por inventar cosas imaginadas. Realmente no han cursado una carrera universitaria en programación, por eso escuchan más los chismes que la realidad. Esto es como una enfermedad: una persona que habla mal, que no tiene vida personal ni conocimientos adecuados, contagia negatividad. Muchas mujeres adultas reaccionan de manera emocional, como enojaditas, molestas, frustrada. Dios mío Qué mentalidad enferma tienen. Su ego y su emocionalidad los destruyen por dentro.
+En la vida No me refiero a personas con discapacidades intelectuales o enfermedades como retraso mental, trastornos del neurodesarrollo, autismo (TEA), TDAH, trastornos específicos del aprendizaje (dislexia, discalculia), Síndrome de Down. Hay persona que aunque no tenga ninguna de estas enfermedades, realmente carece de inteligencia emocional o de un buen manejo mental para entender o aceptar la verdad.
+
+       </p>
+
+        <div class="buttons">
+            <button id="play">🔊 Escuchar</button>
+            <button id="stop">🛑 Detener</button>
+     <a href="legalilgealparte1.html" class="boton-verdad">¿Querés saber la verdad? Hacé clic aquí</a>
+
+        </div>
+    </div>
+
+    <script>
+        let speech = new SpeechSynthesisUtterance();
+        speech.lang = "es-ES";
+        speech.rate = 1;
+        speech.pitch = 1;
+        speech.text = document.querySelector("p").innerText;
+
+        const playBtn = document.getElementById("play");
+        const stopBtn = document.getElementById("stop");
+
+        playBtn.addEventListener("click", () => {
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(speech);
+        });
+
+        stopBtn.addEventListener("click", () => {
+            window.speechSynthesis.cancel();
+        });
+
+
+    </script>
+</body>
+</html>

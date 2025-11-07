@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla con Borde Doble Dinámico</title>
+<style>
+    body {
+        background: linear-gradient(135deg, #a0eaff, #d5ffb3);
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+            border-radius: 10px;
+  max-width: 900px;
+  margin: 90px auto;
+    }
+
+    .table-container {
+        width: 80%;
+        max-width: 900px;
+        max-height: 60vh;
+        overflow-y: auto;
+        margin-bottom: 20px;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        background: #ffe0b3;
+        border: 6px double #000;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        transition: border-color 1s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    td {
+        padding: 25px;
+        color: #000;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    table:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="table-container">
+    <table id="dynamicTable">
+        <tr>
+            <td id="contenidoTabla">
+    Los programadores, creadores de sitios web y software, que son buenas personas e inocentes, expresan lo siguiente: Como digan, somos hackers blancos. No estamos para revisar tus redes sociales como Facebook, Instagram, Twitter, WhatsApp o Telegram. No estamos para nadie, cada uno vive su vida. El mismo respeto y valor que tiene en la sociedad lo aplicamos nosotros. No vigilamos celulares, notebooks ni ningún dispositivo, porque no usamos sistemas operativos ilegales. No somos personas que espiamos a nadie. Solamente, cuando una persona como algunas mujeres adultas visita ciertos sitios web, puede llegar a sentir ansiedad u otra enfermedad. Eso es algo que muchas veces ni los psicólogos entienden bien, y lo investigan de forma equivocada en lo digital. Las personas inocentes y de buen corazón solo dicen la verdad. Son muy inteligentes y tienen una mente clara. Por eso se alejan de todo lo negativo que hay alrededor, especialmente en el ámbito de la tecnología. Muchas mujeres adultas opinan sobre estafas, fraudes o virus, pero a veces solo se enfocan en el dinero y dejan de lado a su familia. En realidad, muchas de esas ideas surgen por confusiones o problemas mentales que no logran reconocer. Las mujeres adultas con problemas mentales no son culpa del gobierno, ni de los partidos políticos, ni de los políticos o políticas. No es culpa del gobierno que algunas personas no estudien la carrera de programación. Así que deben sacar de su cabeza esa enfermedad que solo las limita. Ya sabemos que hay personas que nunca cambiarán su mentalidad, porque pasan todo el día escuchando televisión y siguiendo noticias en sitios oficiales como Clarín, C5N o La Nación. Muchos de esos medios no dicen la verdad con sinceridad, y hay personas que, por dinero, dicen cualquier cosa para que otros les crean. Eso demuestra una gran falta de inteligencia y criterio. Hay muchas profesiones como biología, química, física, medicina, enfermería, psicología, odontología, farmacia, educación física, contabilidad, administración, economía, derecho, matemáticas, ingeniería, arquitectura, diseño gráfico, diseño industrial, arte, música, comunicación, marketing, agronomía, veterinaria, gastronomía y turismo, que también dependen de la programación. Todo eso fue creado gracias a algoritmos matemáticos desarrollados por programadores que diseñaron sitios web, software o aparatos tecnológicos para ayudar en esas profesiones. La programación también ayuda en las escuelas primarias, secundarias y terciarias, ya que permite desarrollar plataformas educativas, sistemas de gestión, clases virtuales y herramientas interactivas que mejoran el aprendizaje de los estudiantes y facilitan la enseñanza de los docentes. Todo lo que se aprende y se enseña en la educación moderna está vinculado de alguna forma con la programación, porque detrás de cada sistema o aplicación hay lógica, algoritmos y tecnología. Cada profesión o carrera dice la verdad de lo que representa, y todo eso lo refleja la programación, que también es conocida hoy como inteligencia artificial (IA). Esta inteligencia artificial está presente en sitios web y plataformas como ChatGPT, Chat DeepSeek, Gemini, entre otros, que poseen una gran capacidad de aprendizaje y enseñan a los demás mediante la comprensión de textos y la creación de nuevos conocimientos. Todo sitio web o software fue creado por profesionales que estudiaron la carrera de programación. Gracias a ellos existen plataformas como Zoom, Meet, Skype, Microsoft Teams, Discord y muchas otras que permiten comunicarse desde distintos países y acceder a la información desde cualquier lugar del mundo. La programación hace posible la conexión entre personas, empresas y escuelas mediante sistemas de videoconferencia y videollamadas que transmiten voz, imagen y datos en tiempo real. Estas herramientas permiten realizar clases virtuales, reuniones de trabajo, entrevistas, exposiciones y hasta consultas médicas a distancia. Todo eso es posible gracias a los algoritmos, las redes y los programas creados por desarrolladores que aplican sus conocimientos en informática, matemáticas y comunicación digital. Además, la programación también está detrás de las traducciones automáticas, los subtítulos en tiempo real, el reconocimiento de voz, las cámaras inteligentes, la transmisión en vivo y la nube donde se guarda la información de manera segura. Sin los programadores, la tecnología que hoy conecta al mundo no existiría. Ellos son quienes hacen posible que la distancia deje de ser un obstáculo y que el conocimiento, la educación y la comunicación lleguen a cualquier parte del planeta. Todo lo que hoy conocemos como módem, router, antenas Wi-Fi, repetidores de señal, servidores, cables de red y centros de datos fue creado gracias al trabajo de los programadores. Todo eso fue programado desde computadoras y notebooks por profesionales que encontraron soluciones tecnológicas que hicieron posible el avance de la comunicación digital. Gracias a la programación, los módems y routers pueden enviar y recibir datos a través de señales digitales que conectan hogares, escuelas, empresas y gobiernos en todo el mundo. Estos aparatos hacen posible lo que hoy se conoce como redes o redes informáticas, que son la base de Internet y de toda la comunicación moderna. Todo eso fue posible gracias a los programadores, quienes desarrollaron los sistemas y algoritmos que permiten que la información viaje de un punto a otro en cuestión de segundos. Además, las redes informáticas conectan satélites, centros de investigación, hospitales, universidades y hasta dispositivos domésticos inteligentes, como televisores, cámaras o parlantes conectados a Internet. Todo esto demuestra que sin la programación no existiría la conexión global ni la tecnología que hoy utilizamos a diario. La programación es la base invisible que mantiene unido al mundo digital y permite que la sociedad avance hacia un futuro cada vez más conectado.
+
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="buttons">
+    <button onclick="window.location.href='index.html'">Volver a Atras</button>
+    <button onclick="leerTexto()">Escuchar</button>
+    <button onclick="detenerLectura()">Detener</button>
+</div>
+
+<script>
+    // Animar el borde de la tabla
+    const table = document.getElementById("dynamicTable");
+    let hue = 0;
+
+    function animateBorder() {
+        hue = (hue + 1) % 360;
+        table.style.borderColor = `hsl(${hue}, 80%, 40%)`;
+        requestAnimationFrame(animateBorder);
+    }
+
+    animateBorder();
+
+    // Funciones de lectura de texto
+    let synth = window.speechSynthesis;
+    let utterance;
+
+    function leerTexto() {
+        const contenido = document.getElementById('contenidoTabla').innerText;
+        if (synth.speaking) {
+            synth.cancel(); // Detener cualquier lectura previa
+        }
+        utterance = new SpeechSynthesisUtterance(contenido);
+        utterance.lang = 'es-ES'; // Español
+        synth.speak(utterance);
+    }
+
+    function detenerLectura() {
+        if (synth.speaking) {
+            synth.cancel();
+        }
+    }
+</script>
+
+</body>
+</html>
